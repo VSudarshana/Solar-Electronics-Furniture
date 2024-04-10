@@ -15,35 +15,3 @@ window.addEventListener("click", function (event) {
     sideNav.classList.add("-left-[100%]"); // Hide the sideNav by adding the class that hides it
   }
 });
-
-AOS.init();
-//navbar scroll
-window.addEventListener("scroll", function () {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY >= 100) {
-    navbar.classList.add("bg-black-scroll");
-  } else {
-    navbar.classList.remove("bg-black-scroll");
-  }
-});
-//smoth beahvior
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Select all links with the "href" attribute starting with "#"
-    const scrollLinks = document.querySelectorAll('a[href^="#"]');
-
-    scrollLinks.forEach(link => {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        // Get the target element's ID from the link's "href" attribute
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          // Scroll to the target element with smooth behavior
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-  });
