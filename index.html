@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/solar.png" type="image/x-icon" />
+  <title>Solar</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- INTERNAL CSS -->
+  <style>
+    body {
+      font-family: "Merriweather", serif;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes rotate360 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .rotating-image {
+      animation: rotate360 infinite 5s linear;
+    }
+  </style>
+</head>
+
+<body class="bg-black">
+  <div class="flex px-5 py-3 justify-between bg-black sticky top-0 z-10">
+    <div class="flex gap-5 items-center">
+      <h1 class="text-4xl font-bold text-white">Solar</h1>
+      <div class="flex flex-col">
+        <h2 class="text-xl font-semibold text-rose-500">Electronics</h2>
+        <h2 class="text-xl font-semibold text-rose-500">Furniture</h2>
+      </div>
+    </div>
+
+    <div class="hidden lg:block ml-auto">
+      <ul class="flex gap-5 py-3 text-white">
+        <a href="#home">
+          <li class="text-rose-500 hover:text-white">Home</li>
+        </a>
+        <a href="#services">
+          <li class="hover:text-rose-500">Services</li>
+        </a>
+        <a href="#aboutus">
+          <li class="hover:text-rose-500">About Us</li>
+        </a>
+        <a href="#contact">
+          <li class="hover:text-rose-500">Contact Us</li>
+        </a>
+      </ul>
+    </div>
+
+    <div class="cursor-pointer flex lg:hidden" id="bars">
+      <i class="fa-solid fa-bars text-white hover:text-rose-500 text-3xl"></i>
+    </div>
+  </div>
+
+  <!-- Side Bar -->
+  <div class="h-full w-[250px] bg-black opacity-90 fixed -left-[100%] transition-all duration-1000 lg:hidden z-[96]"
+    id="sidenav">
+    <div>
+      <ul class="flex flex-col gap-4 mt-6 items-center text-white">
+        <a href="#home">
+          <li class="text-rose-500 hover:text-white">Home</li>
+        </a>
+        <a href="#services">
+          <li class="hover:text-rose-500">Services</li>
+        </a>
+        <a href="#aboutus">
+          <li class="hover:text-rose-500">About Us</li>
+        </a>
+        <a href="#contact">
+          <li class="hover:text-rose-500">Contact Us</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+
+  <section id="home">
+    <div style="opacity: 0.3;" class="hidden lg:block relative p-10">
+      <img src="assets/images/landing-image.png" alt="landing-image">
+    </div>
+
+    <div class=" flex flex-row justify-center lg:hidden">
+      <img class="rounded-full  rotating-image" src="assets/images/solar.png" alt="rotating-image" style="width: 50%;">
+    </div>
+
+    <div>
+      <div class="hidden lg:flex flex-col absolute bottom-96" style="left: 500px;">
+        <h1 class="text-rose-500 text-5xl font-bold">LET YOUR HOME</h1>
+        <h2 class="text-zinc-400 text-3xl font-semibold">BE UNIQUE AND</h2>
+        <h2 class="text-zinc-400 text-3xl font-semibold">STYLISH</h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section id="services" class=" bg-zinc-900">
+    <div class="p-12 flex flex-row flex-wrap gap-7 justify-center items-center">
+      <h2 class="text-zinc-400 text-4xl font-bold">WELCOME TO OUR SITE!</h2>
+      <div>
+        <h2 class="text-rose-500 text-xl">WE OFFER THE LARGEST ASSORTMENT OF UNIQUE ITEMS FOR YOUR HOME!</h2>
+        <h2 class="text-rose-500 text-xl"> STYLE, COMFORT, QUALITY, SELECTION!</h2>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 p-5 justify-center items-center">
+      <div class="flex flex-col gap-5 p-6 w-80 border border-red-500">
+        <h2 class="text-3xl text-rose-500 font-bold border-b-2">Home Appliances</h2>
+        <p class="text-white">TV, AC, Home Theatre, Air Cooler, Washing Machine, Refrigerator, Dishwashers,
+          Fans, Room
+          Heater, Geyser, Water Purifier, UPS, Grinder, Mixie, Stove, Electric Chimney and more...</p>
+      </div>
+      <div class="flex flex-col gap-5 p-6 w-80 border border-red-500">
+        <h2 class=" text-3xl text-rose-500 font-bold border-b-2">Furniture</h2>
+        <p class="text-white">Sofa set, Tables, Chairs, Living Room Furniture, Bero, Bed, Dressing Table,
+          Wooden Bed,
+          Desk, Mattresses, Dining Table,
+          TV Stand, Office Chairs and more...</p>
+      </div>
+    </div>
+
+    <div class="m-12 p-6">
+      <h2 class="text-zinc-400 text-4xl font-bold">What do we provide to you?</h2>
+
+      <div class="flex flex-col lg:flex-row gap-8 mt-6">
+        <div class="flex flex-col gap-3">
+          <i class="fa-solid fa-truck-fast text-rose-500 text-4xl"></i>
+          <h3 class="font-bold text-2xl text-rose-300">Free Door Delivery</h3>
+          <p class="text-white">Experience the ease of free door-to-door delivery on every order. No
+            additional charges,
+            just seamless convenience delivered to your doorstep.</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <i class="fa-regular fa-lightbulb text-rose-500 text-4xl"></i>
+          <h3 class="font-bold text-2xl text-rose-300">Free Installation</h3>
+          <p class="text-white">Enjoy hassle-free setup with our free installation service! Our experts visit
+            your home
+            to set up furniture and electronics, ensuring everything is ready for immediate use at no extra
+            cost.</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <i class="fa-regular fa-circle-check text-rose-500 text-4xl"></i>
+          <h3 class="font-bold text-2xl text-rose-300">Warranty</h3>
+          <p class="text-white">All products come with a comprehensive warranty for your peace of mind. We
+            stand by the
+            quality of our items, ensuring your satisfaction.</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <i class="fa-solid fa-bolt text-rose-500 text-4xl"></i>
+          <h3 class="font-bold text-2xl text-rose-300">Best Offers</h3>
+          <p class="text-white">Discover our unbeatable deals on top-quality products. Don't miss out on our
+            exclusive
+            offers tailored for you.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <h2 class="text-3xl  text-rose-500 font-bold text-center" id="aboutus">About Us</h2>
+  <div class="flex p-8 gap-8 justify-center items-center flex-wrap lg:flex-nowrap">
+    <p class="text-white">Established in 1992, Solar Electronics And Furniture in Paramathi Velur, Namakkal, is a
+      leading player in Home Appliance Dealers. Renowned for its quality products and customer-centric approach, it
+      serves a wide clientele. With dedicated staff and a commitment to excellence, it aims to expand its offerings
+      and
+      reach. Conveniently located near the Taluk Office, commuting is hassle-free. Known for Electronic Goods
+      Showrooms
+      and top-notch service in various categories including Prestige, Godrej, and Whirlpool appliances.</p>
+    <div>
+      <video class="w-full cursor-pointer rounded-3xl" autoplay muted controls>
+        <source src="assets/videos/solar-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="flex gap-6 p-8 flex-wrap">
+    <div class="hidden lg:block border-s-4 border-white"></div>
+    <div class="flex flex-col gap-3">
+      <h1 class="font-bold text-4xl text-rose-300">1000+</h1>
+      <p class="text-white text-xl">Success projects</p>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h1 class="font-bold text-4xl  text-rose-300">800+</h1>
+      <p class="text-white text-xl">Product launches</p>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h1 class="font-bold text-4xl  text-rose-300">5K</h1>
+      <p class="text-white text-xl">Happy customers</p>
+    </div>
+  </div>
+  <hr class="border-2 border-red-500">
+
+  <!-- Contact Us -->
+  <div class="flex justify-evenly mt-5 flex-wrap items-center" id="contact">
+    <div class="roating-image rounded-full">
+      <img class="hidden lg:block rotating-image rounded-full" src="assets/images/solar.png" alt="solar-image"
+        style="width: 350px;">
+    </div>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h3 class="text-3xl text-rose-500">✔Social Medias</h3>
+      <div class="flex gap-4">
+
+        <a href="https://api.whatsapp.com/send?phone=9894847547" target="_blank"><i
+            class="fa-brands fa-whatsapp text-3xl text-white cursor-pointer"></i></a>
+        <a href="https://www.facebook.com/solarelectronics.in" target="_blank"><i
+            class="fa-brands fa-facebook text-2xl text-white cursor-pointer"></i></a>
+        <a href="https://www.linkedin.com/company/solarelectronics/" target="_blank"><i
+            class="fa-brands fa-linkedin text-2xl text-white cursor-pointer"></i></a>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 items-center mt-8">
+      <h3 class="text-3xl text-rose-500">
+        <h3 class="text-3xl text-rose-500">✔Contact</h3>
+      </h3>
+      <div class="flex gap-2">
+        <i class="fa-solid fa-phone-volume text-rose-500 text-2xl"></i>
+        <p class="text-white">+91 98948 47547 </p>
+      </div>
+      <div class="flex gap-2">
+        <i class="fa-regular fa-envelope text-rose-500 text-2xl cursor-pointer"></i>
+        <p class="text-white">solarelectronicsp.velur@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location -->
+  <div class="flex p-8 justify-evenly items-center gap-8 flex-wrap">
+    <div class="flex flex-col gap-3">
+      <h3 class="text-3xl text-rose-500 text-center">✔Address</h3>
+      <p class="text-white text-center">Solar Complex, NH 44, near Taluk Office,</p>
+      <p class="text-white text-center">Padamudipalayam, Velur, Tamil Nadu 638182</p>
+    </div>
+    <div class="flex flex-col gap-3 text-center">
+      <h3 class="text-3xl text-rose-500">✔Timings</h3>
+      <p class="text-white text-xl">
+        Mon - Sun
+      </p>
+      <p class="text-white"> 9:00 am - 9:00 pm</p>
+    </div>
+    <iframe
+      src="
+        https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7689129424316!2d78.0148946740923!3d11.130580852563405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babd49dd0759367%3A0xbde4f88cca4b03be!2sSolar%20Electronics%20%26%20Furniture!5e0!3m2!1sen!2sin!4v1712662659156!5m2!1sen!2sin"
+      width="300" height="280" allowfullscreen="" loading="lazy" class="rounded-3xl border-4 border-red-500"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <div class="bg-zinc-900 p-8 flex flex-col gap-3 items-center">
+    <p class="text-white">© 2024 Solar Electronics And Furniture. All rights reserved.</p>
+    <p class="text-white">Privacy Policy | Terms of Service</p>
+    <p class="text-white text-xl font-bold">Website Designed by <span class="text-rose-500"><a
+          href="https://www.linkedin.com/in/sudarshana-v/" target="_blank">Sudarshana</span></a></p>
+  </div>
+
+  <script src=" ./dist/script.js" defer></script>
+</body>
+
+</html>
